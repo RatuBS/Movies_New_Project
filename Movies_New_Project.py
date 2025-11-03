@@ -538,14 +538,12 @@ try:
         )
         
         st.plotly_chart(fig_words, use_container_width=True)
-        
-        with st.expander("View Word Frequency Table"):
-            st.dataframe(top_words_df)
 
     else:
         st.info("No review text available for analysis")
 
 except Exception as e:
     st.error(f"Error in text processing: {e}")
+
 
 st.success("Use filters on the left to explore")
